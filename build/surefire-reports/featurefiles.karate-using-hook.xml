@@ -1,0 +1,5 @@
+<testsuite failures="0" name="featurefiles/karate-using-hook.feature" skipped="0" tests="1" time="0">
+  <testcase classname="featurefiles.karate-using-hook" name="Karate hook Test case 1" time="0">
+    <system-out/>
+  </testcase>
+</testsuite>

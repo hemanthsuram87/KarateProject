@@ -1,0 +1,72 @@
+<testsuite failures="1" name="featurefiles/karateTestSuite-02.feature" skipped="0" tests="5" time="0.010869">
+  <testcase classname="featurefiles.karateTestSuite-02" name="JsonTest case 1" time="0.004662">
+    <system-out>Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.6"}} . passed
+* print json .............................................................. passed
+* print json.id ........................................................... passed
+* print json.tool.name .................................................... passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.karateTestSuite-02" name="JsonTest case 2" time="0.001002">
+    <system-out>Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.6"}} . passed
+* print json .............................................................. passed
+* print json.id ........................................................... passed
+* print json.tool.name .................................................... passed
+Given def json = .......................................................... passed
+* print json .............................................................. passed
+* print json.id ........................................................... passed
+* print json.tool.name .................................................... passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.karateTestSuite-02" name="Json Test case 3" time="0.004366">
+    <system-out>Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.6"}} . passed
+* print json .............................................................. passed
+* print json.id ........................................................... passed
+* print json.tool.name .................................................... passed
+Given def json = .......................................................... passed
+* print json .............................................................. passed
+* print json.id ........................................................... passed
+* print json.tool.name .................................................... passed
+Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.6"}} . passed
+* assert json.id == "101" ................................................. passed
+* assert json.tool.name == "Karate" ....................................... passed</system-out>
+  </testcase>
+  <testcase classname="featurefiles.karateTestSuite-02" name="Json Test case 4" time="0.000437">
+    <failure message="karateTestSuite-02.feature:35 - path: $.tool.version, actual: '0.9.4', expected: '0.9.6', reason: not equal">Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.6"}} . passed
+* print json .............................................................. passed
+* print json.id ........................................................... passed
+* print json.tool.name .................................................... passed
+Given def json = .......................................................... passed
+* print json .............................................................. passed
+* print json.id ........................................................... passed
+* print json.tool.name .................................................... passed
+Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.6"}} . passed
+* assert json.id == "101" ................................................. passed
+* assert json.tool.name == "Karate" ....................................... passed
+Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.4"}} . passed
+* match json.tool == { "name":"Karate", "version":"0.9.6"} ................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karateTestSuite-02.feature:35 - path: $.tool.version, actual: '0.9.4', expected: '0.9.6', reason: not equal&#13;
+	at ✽.* match json.tool == { "name":"Karate", "version":"0.9.6"} (karateTestSuite-02.feature:35)</failure>
+  </testcase>
+  <testcase classname="featurefiles.karateTestSuite-02" name="Json Test case 5" time="0.000402">
+    <system-out>Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.6"}} . passed
+* print json .............................................................. passed
+* print json.id ........................................................... passed
+* print json.tool.name .................................................... passed
+Given def json = .......................................................... passed
+* print json .............................................................. passed
+* print json.id ........................................................... passed
+* print json.tool.name .................................................... passed
+Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.6"}} . passed
+* assert json.id == "101" ................................................. passed
+* assert json.tool.name == "Karate" ....................................... passed
+Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.4"}} . passed
+* match json.tool == { "name":"Karate", "version":"0.9.6"} ................ failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karateTestSuite-02.feature:35 - path: $.tool.version, actual: '0.9.4', expected: '0.9.6', reason: not equal&#13;
+	at ✽.* match json.tool == { "name":"Karate", "version":"0.9.6"} (karateTestSuite-02.feature:35)&#13;
+
+Given def json = { "id" : "101", "tool": { "name":"Karate", "version":"0.9.6"}} . passed
+* match json.tool == { "name":"Karate", "version":"0.9.6"} ................ passed</system-out>
+  </testcase>
+</testsuite>

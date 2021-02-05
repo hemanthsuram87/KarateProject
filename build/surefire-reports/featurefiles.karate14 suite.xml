@@ -1,0 +1,6 @@
+<testsuite failures="0" name="featurefiles/karate14 suite.feature" skipped="0" tests="1" time="0.006878">
+  <testcase classname="featurefiles.karate14 suite" name="Non static method TC" time="0.006878">
+    <system-out>* def env1 = .............................................................. passed
+* print env1() ............................................................ passed</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,15 @@
+<testsuite failures="0" name="src/test/java/featurefiles/karate05_restapi.feature" skipped="0" tests="1" time="0.889225">
+  <testcase classname="src.test.java.featurefiles.karate05_restapi" name="Rest Test case 1" time="0.889225">
+    <system-out>Given url "https://www.w3schools.com/xml/tempconvert.asmx/CelsiusToFahrenheit" . passed
+And header Content-Type = "application/x-www-form-urlencoded" ............. passed
+And request "Celsius=40" .................................................. passed
+When method POST .......................................................... passed
+Then status 200 ........................................................... passed
+* print responseHeaders ................................................... passed
+* print responseType ...................................................... passed
+* print responseTime ...................................................... passed
+* print response .......................................................... passed
+* assert responseTime &lt;= 1500 ............................................. passed
+* match response //string == 104 .......................................... passed</system-out>
+  </testcase>
+</testsuite>

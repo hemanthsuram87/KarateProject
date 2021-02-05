@@ -1,0 +1,89 @@
+<testsuite failures="1" name="src/test/java/featurefiles/karate15db.feature" skipped="0" tests="4" time="0.577287">
+  <testcase classname="src.test.java.featurefiles.karate15db" name="select stmt test case" time="0.489461">
+    <failure message="karate15db.feature:12 - path: $, actual: '101,Selenium,Se-HQ,&#10;102,UFT,Microfocus,&#10;103,RFT,IBM Rational,&#10;104,SilkTest,Microfocus,&#10;105,TestComplete,SmartBear,&#10;', expected: 'sample2', reason: not a sub-string">* def db = Java.type('misce.MyDbUtil') .................................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed
+* match rows contains "sample2" ........................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate15db.feature:12 - path: $, actual: '101,Selenium,Se-HQ,
+102,UFT,Microfocus,
+103,RFT,IBM Rational,
+104,SilkTest,Microfocus,
+105,TestComplete,SmartBear,
+', expected: 'sample2', reason: not a sub-string&#13;
+	at ✽.* match rows contains "sample2" (karate15db.feature:12)</failure>
+  </testcase>
+  <testcase classname="src.test.java.featurefiles.karate15db" name="insert stmt test case" time="0.027957">
+    <system-out>* def db = Java.type('misce.MyDbUtil') .................................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed
+* match rows contains "sample2" ........................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate15db.feature:12 - path: $, actual: '101,Selenium,Se-HQ,
+102,UFT,Microfocus,
+103,RFT,IBM Rational,
+104,SilkTest,Microfocus,
+105,TestComplete,SmartBear,
+', expected: 'sample2', reason: not a sub-string&#13;
+	at ✽.* match rows contains "sample2" (karate15db.feature:12)&#13;
+
+* def db = Java.type('misce.MyDbUtil') .................................... passed
+* def res = db.insertStatement("Insert into tools values(3022,'sample2','xyz')") . passed
+* print res ............................................................... passed
+* match res == 'Success' .................................................. passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.featurefiles.karate15db" name="update stmt test case" time="0.033005">
+    <system-out>* def db = Java.type('misce.MyDbUtil') .................................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed
+* match rows contains "sample2" ........................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate15db.feature:12 - path: $, actual: '101,Selenium,Se-HQ,
+102,UFT,Microfocus,
+103,RFT,IBM Rational,
+104,SilkTest,Microfocus,
+105,TestComplete,SmartBear,
+', expected: 'sample2', reason: not a sub-string&#13;
+	at ✽.* match rows contains "sample2" (karate15db.feature:12)&#13;
+
+* def db = Java.type('misce.MyDbUtil') .................................... passed
+* def res = db.insertStatement("Insert into tools values(3022,'sample2','xyz')") . passed
+* print res ............................................................... passed
+* match res == 'Success' .................................................. passed
+* def db = Java.type('misce.MyDbUtil') .................................... passed
+* def rowsAffected = db.updateStatement("update tools set name='sample3' where Id=3022") . passed
+* print rowsAffected ...................................................... passed
+* assert rowsAffected &gt;= 1 ................................................ passed</system-out>
+  </testcase>
+  <testcase classname="src.test.java.featurefiles.karate15db" name="delete stmt test case" time="0.026865">
+    <system-out>* def db = Java.type('misce.MyDbUtil') .................................... passed
+* def rows = db.selectStatement("select * from tools") .................... passed
+* print rows .............................................................. passed
+* match rows contains "sample2" ........................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: karate15db.feature:12 - path: $, actual: '101,Selenium,Se-HQ,
+102,UFT,Microfocus,
+103,RFT,IBM Rational,
+104,SilkTest,Microfocus,
+105,TestComplete,SmartBear,
+', expected: 'sample2', reason: not a sub-string&#13;
+	at ✽.* match rows contains "sample2" (karate15db.feature:12)&#13;
+
+* def db = Java.type('misce.MyDbUtil') .................................... passed
+* def res = db.insertStatement("Insert into tools values(3022,'sample2','xyz')") . passed
+* print res ............................................................... passed
+* match res == 'Success' .................................................. passed
+* def db = Java.type('misce.MyDbUtil') .................................... passed
+* def rowsAffected = db.updateStatement("update tools set name='sample3' where Id=3022") . passed
+* print rowsAffected ...................................................... passed
+* assert rowsAffected &gt;= 1 ................................................ passed
+* def db = Java.type('misce.MyDbUtil') .................................... passed
+* def rowsAffected = db.deleteStatement("delete from tools where id=3022") . passed
+* print rowsAffected ...................................................... passed
+* assert rowsAffected &gt;= 1 ................................................ passed</system-out>
+  </testcase>
+</testsuite>
